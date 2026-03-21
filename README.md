@@ -23,29 +23,30 @@ The project is built with a focus on scalability and modern web standards:
 * **Linux & Docker:** Optimized development environment and consistent application containerization.
 
 ---
-demo Kodo_List/
-├── client/                # Mã nguồn Frontend (React + TypeScript)
-│   ├── public/            # Các file tĩnh (Images, Icons, Favicon)
+## 📂 Project Structure
+
+```text
+Kodo_List/
+├── Frontend/              # Client-side (React/Vite + TS)
+│   ├── public/            # Static assets
 │   ├── src/
-│   │   ├── components/    # Các thành phần giao diện dùng chung (Button, Input, Card)
-│   │   ├── pages/         # Các trang chính (Home, Login, Dashboard)
-│   │   ├── services/      # Nơi gọi API từ Backend (Axios/Fetch)
-│   │   ├── store/         # Quản lý trạng thái (Redux/Zustand)
-│   │   └── App.tsx        # File chạy chính của Frontend
-│   └── package.json       # Dependencies của Frontend
+│   │   ├── components/    # Reusable UI components
+│   │   ├── pages/         # Application views
+│   │   ├── services/      # API communication (Axios)
+│   │   └── types/         # TypeScript definitions
+│   ├── tailwind.config.js
+│   └── package.json
 │
-├── server/                # Mã nguồn Backend (Node.js + Express)
+├── Server/                # Backend-side (Node.js + Express)
 │   ├── src/
-│   │   ├── config/        # Cấu hình Database (PostgreSQL), biến môi trường
-│   │   ├── controllers/   # Xử lý logic nghiệp vụ cho từng Route
-│   │   ├── models/        # Định nghĩa cấu trúc bảng Database
-│   │   ├── routes/        # Định nghĩa các đường dẫn API (Endpoints)
-│   │   └── index.ts       # Điểm khởi đầu của Server
-│   ├── .env.example       # File mẫu cấu hình bảo mật (Mật khẩu DB, Port)
-│   └── package.json       # Dependencies của Backend
+│   │   ├── controllers/   # Request handling logic
+│   │   ├── models/        # Database schemas
+│   │   ├── routes/        # API endpoints
+│   │   ├── middleware/    # Security & Logging
+│   │   └── index.ts       # Entry point
+│   ├── .env.example       # Environment template
+│   └── package.json
 │
-├── docs/                  # Tài liệu hướng dẫn, sơ đồ ERD, thiết kế UI/UX
-├── scripts/               # Các script hỗ trợ (Seed data, Migration)
-├── .gitignore             # Danh sách các file/thư mục không đẩy lên GitHub (node_modules, .env)
-├── docker-compose.yml     # File cấu hình khởi chạy nhanh toàn bộ hệ thống
-└── README.md              # Tài liệu hướng dẫn dự án
+├── DATA/                  # Project documentation & raw data
+├── docker-compose.yml     # Container orchestration
+└── README.md.md              # Tài liệu hướng dẫn dự án

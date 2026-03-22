@@ -12,7 +12,7 @@ The project is built with a focus on scalability and modern web standards:
 ### 1. Frontend (User Interface)
 * **HTML5 & CSS3:** Semantic structure and minimalist design. (In progress)
 * **TypeScript:** Ensuring type safety and reducing runtime logic errors. (In progress)
-* **Tailwind CSS:** Utility-first CSS framework for rapid and responsive UI development.
+* **Tailwind CSS:** Utility-first CSS framework for rapid and responsive UI development. (In progress)
 
 ### 2. Backend & Database (Server-side)
 * **Node.js & Express.js:** Building a fast, lightweight, and scalable RESTful API.

@@ -2,15 +2,21 @@ const input = document.getElementById('todo-input');
 const addBtn = document.getElementById('add-btn');
 const todoList = document.getElementById('todo-list');
 
-addBtn.addEventListener('click' || 'Enter', function() {
+const taskForm = document.getElementById('task-form');
+
+taskForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
     const taskContent = input.value.trim();
     if (taskContent === '') {
         alert('Nhập nội dung công việc!');
         return;
     }
+
     createTodo(taskContent);
     input.value = '';
 });
+
 
 function createTodo(text) {
     const todoItem = document.createElement('div');
@@ -26,7 +32,8 @@ function createTodo(text) {
 
     const deleteBtn = document.createElement('button');
     deleteBtn.className = 'delete-btn';
-    deleteBtn.textContent = 'Xóa';
+    deleteBtn.type = 'button';
+    deleteBtn.innerHTML = '<i class="fa fa-trash" aria-hidden="true"></i>';
 
     deleteBtn.addEventListener('click', function() {
         todoList.removeChild(todoItem);

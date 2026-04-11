@@ -2,17 +2,20 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>My Todo List</title>
+    <!-- Tùy biến layout cho thiết bị -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kodo List</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="container">
         <h1>Danh sách công việc</h1>
-        
-        <div class="input-section">
+       <!-- DM - đã đổi từ div qua form để nhấn enter có thể submit -->
+        <form class="input-section" id="task-form">
             <input type="text" id="todo-input" placeholder="Thêm công việc mới">
-            <button id="add-btn">Thêm</button>
-        </div>
+            <button type="submit" id="add-btn">+</button>
+        </form>
 
         <ul id="todo-list">
         </ul>
